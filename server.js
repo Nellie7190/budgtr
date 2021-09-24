@@ -3,6 +3,9 @@ const budget = require('./models/budget');
 const app = express();
 PORT = 3000;
 
+//API - MIDDLEWARE
+const bodyParser = require('body-parser');
+
 // Static
 app.use(express.static('public'));
 

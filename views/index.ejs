@@ -9,29 +9,37 @@
     <title>Document</title>
 </head>
 <body>
+    
+    
+    <div class='container'>
+
     <h1>Budget List</h1>
-    
-    <table>
 
-        <% for(let i=0; i < allBudgets.length; i++) { %>
+        <table>
 
-            <tr>
+            <% for(let i=0; i < allBudgets.length; i++) { %>
 
-            <td><%= allBudgets[i].date%></td>
+                <tr>
 
-            <td>
-                <a href="/budgets/<%=i%>"><%=allBudgets[i].name%></a>
-            </td>
+                <td><%= allBudgets[i].date%></td>
 
-            <td><%= allBudgets[i].amount%></td>
+                <td>
+                    <a href="/budgets/<%=i%>"><%=allBudgets[i].name%></a>
+                </td>
 
-            </tr>
+                <td><%= allBudgets[i].amount%></td>
 
-            
-        <%}%>
-            
-    </table>
-    
+                </tr>
+                
+            <%}%>
+                
+        </table>
+
+        <a href="/budgets/new"><button>Add to budget</button></a>
+        
+    </div>
+
+
 
 
 </body>
