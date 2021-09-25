@@ -28,14 +28,36 @@
                 </td>
 
                 <td><%= allBudgets[i].amount%></td>
-
+                
                 </tr>
                 
+                <%account = account + parseInt(allBudgets[i].amount)%>
+                <%if (account < 0) { %>
+                    <style type='text/css'>
+                        *{
+                            background-color: red;
+                        }
+                    </style>
+                <%} else if(account >1000){%>
+                    <style type='text/css'>
+                        *{
+                            background-color: lightblue;
+                        }
+                    </style>
+                <%} else {%>
+                    <style type='text/css'>
+                        *{
+                            background-color: yellow;
+                        }
+                    </style>
+                <%}%>
             <%}%>
                 
         </table>
 
         <a href="/budgets/new"><button>Add to budget</button></a>
+
+    <h2 id='account'>Bank Account = <%=account%></h2>
         
     </div>
 
